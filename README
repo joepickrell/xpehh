@@ -1,3 +1,5 @@
+This is an implementation of XP-EHH, initially described in Sabeti et al. (2007) Genome-wide detection and characterization of positive selection in human populations (http://www.nature.com/nature/journal/v449/n7164/full/nature06250.html).
+
 To compile (edit dist/Makefile for your machine if necessary):
 
 cd dist/
