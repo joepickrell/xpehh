@@ -2,5 +2,6 @@ This is an implementation of XP-EHH, initially described in Sabeti et al. (2007)
 
 To compile (edit dist/src/Makefile for your machine if necessary):
 
-cd dist/src/
+git clone https://github.com/joepickrell/xpehh.git
+cd xpehh/dist/src/
 make
