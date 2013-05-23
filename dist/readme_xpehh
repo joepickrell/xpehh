@@ -1,0 +1,21 @@
+Documentation for XP-EHH
+
+Included is a 64-bit executable as well as the source code and sample input files. This executable will be sufficient for many; if you want to compile, enter the src/ directory, edit the Makefile as necessary (for instance, those who are not using 64-bit machines will want to remove the -m64 flag), and type:
+
+make xpehh
+
+This will create the executable. 
+
+The input haplotype format is one haplotype per line, with alleles coded as 1 and 0. The map file has the columns rs#, physical position, genetic position, and the alleles that correspond to 0 and 1.
+
+To run the program, the command is ./xpehh -m <map file> -h <first haplotype file> <second haplotype file>, or for the example:
+./xpehh -m sample.ihsmap -h sample.ihshap sample.ihshap2
+
+Output is to standard out; the columns are 1) the SNP name, 2) the physical position, 3) the integrated haplotype homozygosity in population 1 4) the integrated haplotype homozygosity in population 2 and 5) the unstandardized XP-EHH score.
+
+UPDATE 7/27/09: the standard XP-EHH run ignores SNPs when it runs into a distance of over 200kb between adjacent markers while doing the integration, and includes a correction factor for markers with a distance > 20kb. For dense human data, this filter is recommended, but for other organisms it may be suboptimal. To disable this filter, use the -nd flag. For example:
+./xpehh -nd -m sample.ihsmap -h sample.ihshap sample.ihshap2
+
+UPDATE 12/12/12: There was a bug in the computation of XP-EHH when integrating over gaps >20kb, which has now been corrected. Thanks to Zach Szpiech for catching this.
+
+UPDATE 5/23/13: Added more informative error messages

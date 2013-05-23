@@ -1,0 +1,4 @@
+To compile (edit dist/Makefile for your machine if necessary):
+
+cd dist/
+make
