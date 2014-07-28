@@ -127,6 +127,7 @@
 #include <map>
 #include <string>
 #include <vector>
+#include <cstring>
 using namespace std ;
 
 // handy little container for our argument vector
